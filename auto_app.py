@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, classification_report, roc_auc_score
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
 st.title("Credit Card Fraud Detection using Autoencoder")
 
 # Constants: Path to saved models
