@@ -16,7 +16,11 @@ AUTOENCODER_MODEL_FILE = "models/autoencoder_model.h5"
 
 # Load scaler and autoencoder model
 scaler = joblib.load(SCALER_FILE)
-autoencoder = keras.models.load_model(AUTOENCODER_MODEL_FILE)
+
+autoencoder = keras.models.load_model(
+    AUTOENCODER_MODEL_FILE,
+    custom_objects={"mse": keras.losses.MeanSquaredError()}
+)
 
 # Fixed reconstruction error threshold from training
 THRESHOLD = 0.588152202950144
