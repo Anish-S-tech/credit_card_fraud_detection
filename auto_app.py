@@ -11,8 +11,8 @@ from sklearn.metrics import confusion_matrix, classification_report, roc_auc_sco
 st.title("Credit Card Fraud Detection using Autoencoder")
 
 # Constants: Path to saved models
-SCALER_FILE = "scaler.pkl"
-AUTOENCODER_MODEL_FILE = "autoencoder_model.h5"
+SCALER_FILE = "models/scaler.pkl"
+AUTOENCODER_MODEL_FILE = "models/autoencoder_model.h5"
 
 # Load scaler and autoencoder model
 scaler = joblib.load(SCALER_FILE)
